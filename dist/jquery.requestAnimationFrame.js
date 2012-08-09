@@ -4,19 +4,23 @@
 
 (function( $ ) {
 
-var animating,
-	requestAnimationFrame = window.webkitRequestAnimationFrame ||
-		window.mozRequestAnimationFrame ||
-		window.oRequestAnimationFrame;
+// FireFox apparently doesn't like using this from a variable...
+window.requestAnimationFrame = window.requestAnimationFrame ||
+	window.webkitRequestAnimationFrame ||
+	window.mozRequestAnimationFrame ||
+	window.oRequestAnimationFrame ||
+	window.msRequestAnimationFrame;
+
+var animating;
 
 function raf() {
 	if ( animating ) {
-		requestAnimationFrame( raf );
+		window.requestAnimationFrame( raf );
 		jQuery.fx.tick();
 	}
 }
 
-if ( requestAnimationFrame ) {
+if ( window.requestAnimationFrame ) {
 
 	jQuery.fx.timer = function( timer ) {
 		if ( timer() && jQuery.timers.push( timer ) && !animating ) {
