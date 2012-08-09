@@ -7,8 +7,8 @@ Replaces the standard jQuery timer loop with requestAnimationFrame where support
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/gnarf37/jquery.requestAnimationFrame/master/dist/jquery.requestAnimationFrame.min.js
-[max]: https://raw.github.com/gnarf37/jquery.requestAnimationFrame/master/dist/jquery.requestAnimationFrame.js
+[min]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/master/dist/jquery.requestAnimationFrame.min.js
+[max]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/master/dist/jquery.requestAnimationFrame.js
 
 In your web page:
 
