@@ -2,6 +2,8 @@
 
 Replaces the standard jQuery timer loop with requestAnimationFrame where supported.
 
+**Requires jQuery 1.8+**
+
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
