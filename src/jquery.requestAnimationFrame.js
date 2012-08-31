@@ -9,12 +9,24 @@
 
 (function( $ ) {
 
+// requestAnimationFrame polyfill adapted from Erik Möller
+// fixes from Paul Irish and Tino Zijdel
+// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+
+
 var animating,
-	requestAnimationFrame = window.requestAnimationFrame ||
-		window.webkitRequestAnimationFrame ||
-		window.mozRequestAnimationFrame ||
-		window.oRequestAnimationFrame ||
-		window.msRequestAnimationFrame;
+	lastTime = 0,
+	vendors = ['ms', 'moz', 'webkit', 'o'],
+	requestAnimationFrame = window.requestAnimationFrame,
+	cancelAnimationFrame = window.cancelAnimationFrame;
+
+for(; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
+	requestAnimationFrame = window[ vendors[lastTime] + "RequestAnimationFrame" ];
+	cancelAnimationFrame = cancelAnimationFrame ||
+		window[ vendors[lastTime] + "CancelAnimationFrame" ] || 
+		window[ vendors[lastTime] + "CancelRequestAnimationFrame" ];
+}
 
 function raf() {
 	if ( animating ) {
@@ -24,7 +36,9 @@ function raf() {
 }
 
 if ( requestAnimationFrame ) {
-
+	// use rAF
+	window.requestAnimationFrame = requestAnimationFrame;
+	window.cancelAnimationFrame = cancelAnimationFrame;
 	jQuery.fx.timer = function( timer ) {
 		if ( timer() && jQuery.timers.push( timer ) && !animating ) {
 			animating = true;
@@ -35,7 +49,22 @@ if ( requestAnimationFrame ) {
 	jQuery.fx.stop = function() {
 		animating = false;
 	};
+} else {
+	// polyfill
+	window.requestAnimationFrame = function( callback, element ) {
+		var currTime = new Date().getTime(),
+			timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) ),
+			id = window.setTimeout( function() {
+				callback( currTime + timeToCall );
+			}, timeToCall );
+		lastTime = currTime + timeToCall;
+		return id;
+	};
 
+	window.cancelAnimationFrame = function(id) {
+		clearTimeout(id);
+	};
+    
 }
 
 }( jQuery ));
