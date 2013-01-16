@@ -5,10 +5,10 @@ Replaces the standard jQuery timer loop with requestAnimationFrame where support
 **Requires jQuery 1.8+**
 
 ## Getting Started
-Download the [production version][min] or the [development version][max].
+Download the [production version][min] or the [development version][max] of version 0.1.0.
 
-[min]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/master/dist/jquery.requestAnimationFrame.min.js
-[max]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/master/dist/jquery.requestAnimationFrame.js
+[min]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.0/dist/jquery.requestAnimationFrame.min.js
+[max]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.0/dist/jquery.requestAnimationFrame.js
 
 In your web page:
 
