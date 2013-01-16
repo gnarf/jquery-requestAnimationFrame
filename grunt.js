@@ -57,4 +57,30 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', 'lint qunit concat min');
 
+  grunt.registerTask( "manifest", function() {
+    var pkg = grunt.config( "pkg" );
+    grunt.file.write( "requestAnimationFrame.jquery.json", JSON.stringify({
+      name: "requestAnimationFrame",
+      title: pkg.title,
+      description: pkg.description,
+      keywords: pkg.keywords,
+      version: pkg.version,
+      author: {
+        name: pkg.author.name,
+        url: pkg.author.url.replace( "master", pkg.version )
+      },
+      maintainers: pkg.maintainers,
+      licenses: pkg.licenses.map(function( license ) {
+        license.url = license.url.replace( "master", pkg.version );
+        return license;
+      }),
+      bugs: pkg.bugs,
+      homepage: pkg.homepage,
+      docs: pkg.homepage,
+      dependencies: {
+        jquery: ">=1.8"
+      }
+    }, null, "\t" ) );
+  });
+
 };

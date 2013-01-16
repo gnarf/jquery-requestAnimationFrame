@@ -1,0 +1,34 @@
+{
+  "name": "jquery-requestAnimationFrame",
+  "title": "jQuery requestAnimationFrame",
+  "description": "Replaces the standard jQuery timer loop with requestAnimationFrame where supported. Requires jQuery 1.8",
+  "version": "0.1.0",
+  "homepage": "https://github.com/gnarf37/jquery-requestAnimationFrame",
+  "author": {
+    "name": "Corey Frang",
+    "url": "https://github.com/gnarf37"
+  },
+  "maintainers": [
+    {
+      "name": "Corey Frang",
+      "email": "gnarf37@gmail.com",
+      "url": "http://gnarf.net"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gnarf37/jquery-requestAnimationFrame.git"
+  },
+  "bugs": "https://github.com/gnarf37/jquery-requestAnimationFrame/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jquery/gnarf37/jquery-requestAnimationFrame/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  },
+  "keywords": [ "animation" ]
+}
