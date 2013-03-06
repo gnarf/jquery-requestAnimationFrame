@@ -18,10 +18,10 @@ To quote part of the Jank Busting article:
 
 ## Download
 
-Download the [production version][min] or the [development version][max] of version 0.1.0.
+Download the [production version][min] or the [development version][max] of version 0.1.1.
 
-[min]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.0/dist/jquery.requestAnimationFrame.min.js
-[max]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.0/dist/jquery.requestAnimationFrame.js
+[min]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.1/dist/jquery.requestAnimationFrame.min.js
+[max]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.1/dist/jquery.requestAnimationFrame.js
 
 In your web page:
 
