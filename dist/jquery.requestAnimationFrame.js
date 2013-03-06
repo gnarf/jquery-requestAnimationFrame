@@ -1,4 +1,4 @@
-/*! jQuery requestAnimationFrame - v0.1.1pre - 2013-03-05
+/*! jQuery requestAnimationFrame - v0.1.1 - 2013-03-05
 * https://github.com/gnarf37/jquery-requestAnimationFrame
 * Copyright (c) 2013 Corey Frang; Licensed MIT */
 

@@ -45,6 +45,8 @@ _Also, please don't edit files in the "dist" subdirectory as they are generated 
 
 ## Release History
 
+* 0.1.1 - Mar 5 2013
+  * Removed `ms` prefix
 * 0.1.0 - Jan 13 2013
   * Initial Release
 
