@@ -2,7 +2,7 @@
   "name": "jquery.requestAnimationFrame",
   "title": "jQuery requestAnimationFrame",
   "description": "Replaces the standard jQuery timer loop with requestAnimationFrame where supported. Requires jQuery 1.8",
-  "version": "0.1.1",
+  "version": "0.1.2pre",
   "homepage": "https://github.com/gnarf37/jquery-requestAnimationFrame",
   "author": {
     "name": "Corey Frang",
