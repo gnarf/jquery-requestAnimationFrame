@@ -17,7 +17,7 @@
 
 var animating,
 	lastTime = 0,
-	vendors = ['webkit', 'moz', 'o'],
+	vendors = ['webkit', 'moz'],
 	requestAnimationFrame = window.requestAnimationFrame,
 	cancelAnimationFrame = window.cancelAnimationFrame;
 
