@@ -1,4 +1,4 @@
-/*! jQuery requestAnimationFrame - v0.1.2pre - 2013-03-05
+/*! jQuery requestAnimationFrame - v0.1.2pre - 2013-04-15
 * https://github.com/gnarf37/jquery-requestAnimationFrame
 * Copyright (c) 2013 Corey Frang; Licensed MIT */
 
@@ -12,7 +12,7 @@
 
 var animating,
 	lastTime = 0,
-	vendors = ['webkit', 'moz', 'o'],
+	vendors = ['webkit', 'moz'],
 	requestAnimationFrame = window.requestAnimationFrame,
 	cancelAnimationFrame = window.cancelAnimationFrame;
 
