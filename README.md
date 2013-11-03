@@ -6,7 +6,7 @@ Replaces the standard jQuery timer loop with `requestAnimationFrame` where suppo
 
 ## What is `requestAnimationFrame`?
 
-`requestAnimationFrame` is a [working draft spec](http://www.w3.org/TR/animation-timing/#requestAnimationFrame) that attempts to improve our animation performace by better syncing up with the frame rate of the browser.  For more information, read this article on [Jank Busting](http://www.html5rocks.com/en/tutorials/speed/rendering/)
+`requestAnimationFrame` is a [W3C spec](http://www.w3.org/TR/animation-timing/#requestAnimationFrame) (at [Candidate Recommendation](http://www.w3.org/2005/10/Process-20051014/tr.html#q74) level) that attempts to improve our animation performace by better syncing up with the frame rate of the browser.  For more information, read this article on [Jank Busting](http://www.html5rocks.com/en/tutorials/speed/rendering/)
 
 ## Why should I use it?
 
@@ -53,5 +53,5 @@ _Also, please don't edit files in the "dist" subdirectory as they are generated 
   * Initial Release
 
 ## License
-Copyright (c) 2012 Corey Frang  
+Copyright (c) 2012 Corey Frang
 Licensed under the MIT license.
