@@ -31,7 +31,7 @@ for(; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
 function raf() {
 	if ( animating ) {
 		requestAnimationFrame( raf );
-		jQuery.fx.tick();
+		$.fx.tick();
 	}
 }
 
@@ -39,14 +39,14 @@ if ( requestAnimationFrame ) {
 	// use rAF
 	window.requestAnimationFrame = requestAnimationFrame;
 	window.cancelAnimationFrame = cancelAnimationFrame;
-	jQuery.fx.timer = function( timer ) {
-		if ( timer() && jQuery.timers.push( timer ) && !animating ) {
+	$.fx.timer = function( timer ) {
+		if ( timer() && $.timers.push( timer ) && !animating ) {
 			animating = true;
 			raf();
 		}
 	};
 
-	jQuery.fx.stop = function() {
+	$.fx.stop = function() {
 		animating = false;
 	};
 } else {
