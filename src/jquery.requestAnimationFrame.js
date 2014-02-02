@@ -23,30 +23,16 @@
 // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
 
 
-var animating,
-	lastTime = 0,
-	vendors = ['webkit', 'moz'],
-	requestAnimationFrame = window.requestAnimationFrame,
-	cancelAnimationFrame = window.cancelAnimationFrame;
-
-for(; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
-	requestAnimationFrame = window[ vendors[lastTime] + "RequestAnimationFrame" ];
-	cancelAnimationFrame = cancelAnimationFrame ||
-		window[ vendors[lastTime] + "CancelAnimationFrame" ] ||
-		window[ vendors[lastTime] + "CancelRequestAnimationFrame" ];
-}
+var animating;
 
 function raf() {
 	if ( animating ) {
-		requestAnimationFrame( raf );
+		window.requestAnimationFrame( raf );
 		jQuery.fx.tick();
 	}
 }
 
-if ( requestAnimationFrame ) {
-	// use rAF
-	window.requestAnimationFrame = requestAnimationFrame;
-	window.cancelAnimationFrame = cancelAnimationFrame;
+if ( window.requestAnimationFrame ) {
 	jQuery.fx.timer = function( timer ) {
 		if ( timer() && jQuery.timers.push( timer ) && !animating ) {
 			animating = true;
@@ -57,22 +43,6 @@ if ( requestAnimationFrame ) {
 	jQuery.fx.stop = function() {
 		animating = false;
 	};
-} else {
-	// polyfill
-	window.requestAnimationFrame = function( callback, element ) {
-		var currTime = new Date().getTime(),
-			timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) ),
-			id = window.setTimeout( function() {
-				callback( currTime + timeToCall );
-			}, timeToCall );
-		lastTime = currTime + timeToCall;
-		return id;
-	};
-
-	window.cancelAnimationFrame = function(id) {
-		clearTimeout(id);
-	};
-
 }
 
 }));
