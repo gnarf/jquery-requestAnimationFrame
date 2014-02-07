@@ -1,8 +1,8 @@
-/*! jQuery requestAnimationFrame - v0.1.3pre - 2013-04-15
+/*! jQuery requestAnimationFrame - v0.1.3pre - 2014-02-07
 * https://github.com/gnarf37/jquery-requestAnimationFrame
-* Copyright (c) 2013 Corey Frang; Licensed MIT */
+* Copyright (c) 2014 Corey Frang; Licensed MIT */
 
-(function( $ ) {
+(function( jQuery ) {
 
 // requestAnimationFrame polyfill adapted from Erik Möller
 // fixes from Paul Irish and Tino Zijdel
