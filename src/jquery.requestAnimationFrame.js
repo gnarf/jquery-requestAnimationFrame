@@ -8,13 +8,13 @@
  */
  // UMD factory https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
 (function (factory) {
-  if (typeof define === 'function' && define.amd) {
+	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module.
 		define(['jquery'], factory);
-  } else {
+	} else {
 		// Browser globals
 		factory(jQuery);
-  }
+	}
 }(function (jQuery) {
 
 // requestAnimationFrame polyfill adapted from Erik Möller
@@ -32,7 +32,7 @@ var animating,
 for(; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
 	requestAnimationFrame = window[ vendors[lastTime] + "RequestAnimationFrame" ];
 	cancelAnimationFrame = cancelAnimationFrame ||
-		window[ vendors[lastTime] + "CancelAnimationFrame" ] || 
+		window[ vendors[lastTime] + "CancelAnimationFrame" ] ||
 		window[ vendors[lastTime] + "CancelRequestAnimationFrame" ];
 }
 
@@ -72,7 +72,7 @@ if ( requestAnimationFrame ) {
 	window.cancelAnimationFrame = function(id) {
 		clearTimeout(id);
 	};
-    
+
 }
 
 }));
