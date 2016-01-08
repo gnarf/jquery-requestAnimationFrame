@@ -6,8 +6,16 @@
  * Copyright (c) 2012 Corey Frang
  * Licensed under the MIT license.
  */
-
-(function( jQuery ) {
+ // UMD factory https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
+(function (factory) {
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define(['jquery'], factory);
+	} else {
+		// Browser globals
+		factory(jQuery);
+	}
+}(function (jQuery) {
 
 // requestAnimationFrame polyfill adapted from Erik Möller
 // fixes from Paul Irish and Tino Zijdel
@@ -24,7 +32,7 @@ var animating,
 for(; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
 	requestAnimationFrame = window[ vendors[lastTime] + "RequestAnimationFrame" ];
 	cancelAnimationFrame = cancelAnimationFrame ||
-		window[ vendors[lastTime] + "CancelAnimationFrame" ] || 
+		window[ vendors[lastTime] + "CancelAnimationFrame" ] ||
 		window[ vendors[lastTime] + "CancelRequestAnimationFrame" ];
 }
 
@@ -64,7 +72,7 @@ if ( requestAnimationFrame ) {
 	window.cancelAnimationFrame = function(id) {
 		clearTimeout(id);
 	};
-    
+
 }
 
-}( jQuery ));
+}));

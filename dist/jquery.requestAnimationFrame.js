@@ -1,8 +1,17 @@
-/*! jQuery requestAnimationFrame - v0.1.3pre - 2014-02-07
+/*! jQuery requestAnimationFrame - v0.1.3pre - 2015-04-27
 * https://github.com/gnarf37/jquery-requestAnimationFrame
-* Copyright (c) 2014 Corey Frang; Licensed MIT */
+* Copyright (c) 2015 Corey Frang; Licensed MIT */
 
-(function( jQuery ) {
+// UMD factory https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define(['jquery'], factory);
+  } else {
+		// Browser globals
+		factory(jQuery);
+  }
+}(function (jQuery) {
 
 // requestAnimationFrame polyfill adapted from Erik Möller
 // fixes from Paul Irish and Tino Zijdel
@@ -62,4 +71,4 @@ if ( requestAnimationFrame ) {
     
 }
 
-}( jQuery ));
+}));
