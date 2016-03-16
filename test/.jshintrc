@@ -1,0 +1,10 @@
+{
+	"extends": "../.jshintrc-common",
+
+	"browser": true,
+
+	"globals": {
+		"jQuery": false,
+		"QUnit": false
+	}
+}

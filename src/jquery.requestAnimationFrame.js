@@ -1,21 +1,31 @@
-/*
- * jquery.requestAnimationFrame
+/*!
+ * jquery.requestAnimationFrame - @VERSION
  * https://github.com/gnarf37/jquery-requestAnimationFrame
  * Requires jQuery 1.8+
  *
- * Copyright (c) 2012 Corey Frang
+ * Copyright (c) @YEAR Corey Frang
  * Licensed under the MIT license.
  */
  // UMD factory https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
-(function (factory) {
-	if (typeof define === 'function' && define.amd) {
+( function ( factory ) {
+	if ( typeof define === "function" && define.amd ) {
+
 		// AMD. Register as an anonymous module.
-		define(['jquery'], factory);
+		define( [ "jquery" ], factory );
 	} else {
+
 		// Browser globals
-		factory(jQuery);
+		factory( jQuery );
 	}
-}(function (jQuery) {
+}( function ( jQuery ) {
+
+if ( Number( jQuery.fn.jquery.split( "." )[ 0 ] ) >= 3 ) {
+	if ( window.console && window.console.warn ) {
+		window.console.warn( "The jquery.requestAnimationFrame plugin is not needed " +
+			"in jQuery 3.0 or newer as they handle it natively." );
+	}
+	return;
+}
 
 var animating;
 
@@ -39,4 +49,4 @@ if ( window.requestAnimationFrame ) {
 	};
 }
 
-}));
+} ) );

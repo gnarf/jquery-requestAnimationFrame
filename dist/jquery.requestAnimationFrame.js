@@ -1,23 +1,31 @@
-/*! jQuery requestAnimationFrame - v0.1.3pre - 2016-02-03
-* https://github.com/gnarf37/jquery-requestAnimationFrame
-* Copyright (c) 2016 Corey Frang; Licensed MIT */
+/*!
+ * jquery.requestAnimationFrame - 0.1.3-pre
+ * https://github.com/gnarf37/jquery-requestAnimationFrame
+ * Requires jQuery 1.8+
+ *
+ * Copyright (c) 2016 Corey Frang
+ * Licensed under the MIT license.
+ */
+ // UMD factory https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
+( function ( factory ) {
+	if ( typeof define === "function" && define.amd ) {
 
-// UMD factory https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
-(function (factory) {
-	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module.
-		define(['jquery'], factory);
+		define( [ "jquery" ], factory );
 	} else {
+
 		// Browser globals
-		factory(jQuery);
+		factory( jQuery );
 	}
-}(function (jQuery) {
+}( function ( jQuery ) {
 
-// requestAnimationFrame polyfill adapted from Erik Möller
-// fixes from Paul Irish and Tino Zijdel
-// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
-
+if ( Number( jQuery.fn.jquery.split( "." )[ 0 ] ) >= 3 ) {
+	if ( window.console && window.console.warn ) {
+		window.console.warn( "The jquery.requestAnimationFrame plugin is not needed " +
+			"in jQuery 3.0 or newer as they handle it natively." );
+	}
+	return;
+}
 
 var animating;
 
@@ -41,4 +49,4 @@ if ( window.requestAnimationFrame ) {
 	};
 }
 
-}));
+} ) );
