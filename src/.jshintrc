@@ -1,0 +1,9 @@
+{
+	"extends": "../.jshintrc-common",
+
+	"globals": {
+		"window": true,
+		"jQuery": true,
+		"define": true
+	}
+}
