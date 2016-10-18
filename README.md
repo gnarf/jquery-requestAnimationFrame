@@ -1,5 +1,7 @@
 # jQuery requestAnimationFrame
 
+[![CDNJS](https://img.shields.io/cdnjs/v/jquery-requestAnimationFrame.svg)](https://cdnjs.com/libraries/jquery-requestAnimationFrame)
+
 Replaces the standard jQuery timer loop with `requestAnimationFrame` where supported.
 
 **Requires jQuery 1.8+**
