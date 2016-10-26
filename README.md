@@ -22,8 +22,8 @@ To quote part of the Jank Busting article:
 
 Download the [production version][min] or the [development version][max] of version 0.1.2.
 
-[min]: https://unpkg.com/jquery.requestanimationframe@0.2.0/dist/jquery.requestanimationframe.min.js
-[max]: https://unpkg.com/jquery.requestanimationframe@0.2.0/dist/jquery.requestanimationframe.js
+[min]: https://unpkg.com/jquery.requestanimationframe@0.2.2/dist/jquery.requestanimationframe.min.js
+[max]: https://unpkg.com/jquery.requestanimationframe@0.2.2/dist/jquery.requestanimationframe.js
 
 In your web page:
 
@@ -47,7 +47,7 @@ _Also, please don't edit files in the "dist" subdirectory as they are generated 
 
 ## Release History
 
-* 0.2.1 - Oct 26 2016
+* 0.2.1, 0.2.2 - Oct 26 2016
   * README updates
 * 0.2.0 - Oct 26 2016
   * Started publishing to npm :tada:
