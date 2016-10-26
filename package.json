@@ -9,11 +9,15 @@
     "email": "gnarf37@gmail.com",
     "url": "https://github.com/gnarf37"
   },
-  "maintainers": [
+  "contributors": [
     {
       "name": "Corey Frang",
       "email": "gnarf37@gmail.com",
       "url": "http://gnarf.net"
+    },
+    {
+      "name": "Michał Gołębiowski",
+      "email": "m.goleb@gmail.com"
     }
   ],
   "repository": {
