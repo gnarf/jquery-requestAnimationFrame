@@ -20,19 +20,19 @@ To quote part of the Jank Busting article:
 
 Download the [production version][min] or the [development version][max] of version 0.1.2.
 
-[min]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.2/dist/jquery.requestAnimationFrame.min.js
-[max]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.2/dist/jquery.requestAnimationFrame.js
+[min]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.2/dist/jquery.requestanimationframe.min.js
+[max]: https://raw.github.com/gnarf37/jquery-requestAnimationFrame/0.1.2/dist/jquery.requestanimationframe.js
 
 In your web page:
 
 ```html
 <script src="jquery.js"></script>
-<script src="jquery.requestAnimationFrame.min.js"></script>
+<script src="jquery.requestanimationframe.min.js"></script>
 ```
 
 ## Documentation
 
-There isn't anything you need to do other than include the `jquery.requestAnimationFrame.js` file to use `requestAnimationFrame`.
+There isn't anything you need to do other than include the `jquery.requestanimationframe.js` file to use `requestAnimationFrame`.
 
 You should however beware of the first point above: **Animations in background tabs get paused**.
 

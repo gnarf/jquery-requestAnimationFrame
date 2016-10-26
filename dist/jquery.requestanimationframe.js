@@ -1,9 +1,9 @@
 /*!
- * jquery.requestAnimationFrame - @VERSION
+ * jquery.requestanimationframe - 0.1.3-pre
  * https://github.com/gnarf37/jquery-requestAnimationFrame
  * Requires jQuery 1.8+
  *
- * Copyright (c) @YEAR Corey Frang
+ * Copyright (c) 2016 Corey Frang
  * Licensed under the MIT license.
  */
  // UMD factory https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
@@ -21,7 +21,7 @@
 
 if ( Number( jQuery.fn.jquery.split( "." )[ 0 ] ) >= 3 ) {
 	if ( window.console && window.console.warn ) {
-		window.console.warn( "The jquery.requestAnimationFrame plugin is not needed " +
+		window.console.warn( "The jquery.requestanimationframe plugin is not needed " +
 			"in jQuery 3.0 or newer as they handle it natively." );
 	}
 	return;

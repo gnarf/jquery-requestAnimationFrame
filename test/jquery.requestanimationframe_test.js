@@ -1,7 +1,7 @@
 ( function() {
 	"use strict";
 
-	QUnit.module( "jQuery.requestAnimationFrame" );
+	QUnit.module( "jquery.requestanimationframe" );
 
 	QUnit.test( "Animations still work", 1, function( assert ) {
 		var done = assert.async();
