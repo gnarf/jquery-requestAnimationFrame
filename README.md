@@ -47,6 +47,13 @@ _Also, please don't edit files in the "dist" subdirectory as they are generated 
 
 ## Release History
 
+* 0.2.1 - Oct 26 2016
+  * README updates
+* 0.2.0 - Oct 26 2016
+  * Started publishing to npm :tada:
+  * Added Browserify/RequireJS/Webpack support
+  * Dropped the rAF polyfill
+  * Stopped using the vendor-prefixed rAF version; such browsers are now treated as if they didn't have rAF at all
 * 0.1.2 - Apr 15 2013
   * Removed `o` prefix - opera only ships with unprefixed rAF
 * 0.1.1 - Mar 5 2013
