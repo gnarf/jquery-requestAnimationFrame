@@ -1,5 +1,5 @@
 /*!
- * jquery.requestanimationframe - 0.1.3-pre
+ * jquery.requestanimationframe - 0.2.3-pre
  * https://github.com/gnarf37/jquery-requestAnimationFrame
  * Requires jQuery 1.8+
  *
