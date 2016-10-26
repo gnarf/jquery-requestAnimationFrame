@@ -32,11 +32,12 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "eslint-config-jquery": "1.0.0",
     "grunt": "1.0.1",
     "grunt-cli": "1.2.0",
-    "grunt-contrib-jshint": "1.0.0",
     "grunt-contrib-qunit": "1.2.0",
     "grunt-contrib-uglify": "2.0.0",
+    "grunt-eslint": "19.0.0",
     "grunt-text-replace": "0.4.0",
     "jquery": "1.11.3",
     "load-grunt-tasks": "3.5.2",

@@ -19,21 +19,23 @@ module.exports = function( grunt ) {
 						to: "<%= grunt.template.today('yyyy') %>"
 					}
 				]
-			},
+			}
 		},
 		qunit: {
 			all: [ "test/**/*.html" ]
 		},
-		jshint: {
+		eslint: {
+			options: {
+
+				// See https://github.com/sindresorhus/grunt-eslint/issues/119
+				quiet: true
+			},
 			all: {
 				src: [ "Gruntfile.js", "src/**/*.js", "test/**/*.js" ]
-			},
-			options: {
-				jshintrc: true
 			}
 		},
 		watch: {
-			files: [ "<%= jshint.all.src %>" ],
+			files: [ "<%= eslint.all.src %>" ],
 			tasks: [ "lint", "qunit" ]
 		},
 		uglify: {
@@ -55,7 +57,7 @@ module.exports = function( grunt ) {
 				banner: "/*! jQuery requestAnimationFrame - <%= pkg.version %> - " +
 					"<%= grunt.template.today('yyyy-mm-dd') %>\n" +
 					"<%= pkg.homepage ? '* ' + pkg.homepage + '\\n' : '' %>" +
-					 " * Copyright (c) <%= grunt.template.today('yyyy') %> " +
+					" * Copyright (c) <%= grunt.template.today('yyyy') %> " +
 					"<%= pkg.author.name %>; Licensed <%= pkg.license %> */"
 			}
 		}
@@ -65,6 +67,6 @@ module.exports = function( grunt ) {
 	require( "load-grunt-tasks" )( grunt );
 
 	// Default task.
-	grunt.registerTask( "default", [ "jshint", "qunit", "replace", "uglify" ] );
+	grunt.registerTask( "default", [ "eslint", "qunit", "replace", "uglify" ] );
 
 };

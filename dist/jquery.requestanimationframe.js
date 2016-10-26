@@ -7,7 +7,7 @@
  * Licensed under the MIT license.
  */
  // UMD factory https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
-( function ( factory ) {
+( function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.
@@ -17,7 +17,7 @@
 		// Browser globals
 		factory( jQuery );
 	}
-}( function ( jQuery ) {
+} )( function( jQuery ) {
 
 if ( Number( jQuery.fn.jquery.split( "." )[ 0 ] ) >= 3 ) {
 	if ( window.console && window.console.warn ) {
@@ -49,4 +49,4 @@ if ( window.requestAnimationFrame ) {
 	};
 }
 
-} ) );
+} );
