@@ -20,6 +20,10 @@
       "email": "m.goleb@gmail.com"
     }
   ],
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/gnarf37/jquery-requestAnimationFrame.git"
