@@ -2,6 +2,8 @@
 
 Replaces the standard jQuery timer loop with `requestAnimationFrame` where supported.
 
+NOTE: jQuery 3.0.0 & newer uses `requestAnimationFrame` natively if it's available in the browser. This plugin is only needed for older versions of jQuery. If it detects jQuery 3.0 or newer it warns and does nothing.
+
 **Requires jQuery 1.8+**
 
 ## What is `requestAnimationFrame`?
